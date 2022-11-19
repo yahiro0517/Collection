@@ -1,24 +1,29 @@
 package practice;
 
 import java.time.LocalDate;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 public class Chapter5 {
 
-	public static void main(String[] args) {
-		Map<LocalDate, String> tasks = new TreeMap<>();
-		tasks.put(LocalDate.parse("2021-10-21"), "牛乳を買う。");
-		tasks.put(LocalDate.parse("2021-09-15"), "〇〇社面談。");
-		tasks.put(LocalDate.parse("2021-12-04"), "手帳を買う。");
-		tasks.put(LocalDate.parse("2021-08-10"), "散髪に行く。");
-		tasks.put(LocalDate.parse("2021-11-09"), "スクールの課題を解く。");
+	public static void main(String[] args) throws Exception {
+		List<Task> list = new ArrayList<>();
+		//Task task = new Task();
+		list.add(new Task(LocalDate.of(2021, 10, 21), "牛乳を買う。"));
+		list.add(new Task(LocalDate.of(2021, 9, 15), "〇〇社面談。"));
+		list.add(new Task(LocalDate.of(2021, 12, 4), "手帳を買う。"));
+		list.add(new Task(LocalDate.of(2021, 8, 10), "散髪に行く。"));
+		list.add(new Task(LocalDate.of(2021, 11, 9), "スクールの課題を解く。"));
 		
-		for (LocalDate t : tasks.keySet()) {
-			System.out.println(tasks.get(t));
-		}
+		Collections.sort(list);
 		
+		
+		 for (Task task : list) {
+			 System.out.println(task.date + ":" + task.taskDescription);
+		 }
+		 
 	}
 
 }
