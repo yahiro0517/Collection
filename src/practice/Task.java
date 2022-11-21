@@ -32,13 +32,6 @@ public class Task implements Comparable<Task> {
 
 	@Override
 	public int compareTo(Task o) {
-		if (this.date < o.getDate()) {
-			return -1;
-		} else if (this.date > o.getDate()) {
-			return 1;
-		} else {
-			return 0;
-		}
-		
+			return date.compareTo(o.date);		
 	}
 }

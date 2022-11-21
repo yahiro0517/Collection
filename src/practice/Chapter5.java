@@ -11,14 +11,13 @@ public class Chapter5 {
 	public static void main(String[] args) throws Exception {
 		List<Task> list = new ArrayList<>();
 		//Task task = new Task();
-		list.add(new Task(LocalDate.of(2021, 10, 21), "牛乳を買う。"));
-		list.add(new Task(LocalDate.of(2021, 9, 15), "〇〇社面談。"));
-		list.add(new Task(LocalDate.of(2021, 12, 4), "手帳を買う。"));
-		list.add(new Task(LocalDate.of(2021, 8, 10), "散髪に行く。"));
-		list.add(new Task(LocalDate.of(2021, 11, 9), "スクールの課題を解く。"));
+		list.add(new Task(LocalDate.of(2021, 10, 21), "牛乳を買う"));
+		list.add(new Task(LocalDate.of(2021, 9, 15), "〇〇社面談"));
+		list.add(new Task(LocalDate.of(2021, 12, 4), "手帳を買う"));
+		list.add(new Task(LocalDate.of(2021, 8, 10), "散髪に行く"));
+		list.add(new Task(LocalDate.of(2021, 11, 9), "スクールの課題を解く"));
 		
-		Collections.sort(list);
-		
+		Collections.sort(list);		
 		
 		 for (Task task : list) {
 			 System.out.println(task.date + ":" + task.taskDescription);
